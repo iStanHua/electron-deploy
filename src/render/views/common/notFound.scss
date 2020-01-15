@@ -1,0 +1,29 @@
+.not-found-page {
+  display: flex;
+  padding-top: $size * 80;
+  justify-content: center;
+  align-items: center;
+
+  .not-found {
+    text-align: center;
+  }
+
+  .code {
+    padding-top: $size * 30;
+    line-height: $size * 80;
+    font-size: $size * 80;
+    color: $danger-color;
+    text-shadow: 0 $size * 1 $size * 5 rgba($black-color, .28);
+
+    span {
+      margin: 0 $size * 5;
+      color: $warning-color;
+    }
+  }
+
+  .desc {
+    margin-top: $size * 10;
+    line-height: $size * 20;
+    font-size: $size * 16;
+  }
+}

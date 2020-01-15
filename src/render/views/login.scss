@@ -1,0 +1,36 @@
+.login-page {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+  flex-direction: column;
+
+  .header {
+    color: $white-color;
+    background-color: $base-color;
+
+    .icon {
+      color: $white-color;
+    }
+  }
+
+  .form-box {
+    padding: 20 * $size;
+
+  }
+
+  .form-item {
+    .icon {
+      top: 10 * $size;
+      left: 8 * $size;
+    }
+
+    .input {
+      padding-left: 30 * $size;
+      padding-right: 20 * $size;
+    }
+  }
+
+  .loading {
+    padding: 20 * $size;
+  }
+}

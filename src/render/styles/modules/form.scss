@@ -1,0 +1,42 @@
+// styles/modules/form.scss
+
+.form-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 20 * $size;
+
+  &.is-required {
+
+    label {
+      &::before {
+        content: '*';
+        color: $red-color;
+      }
+    }
+  }
+
+  label {
+    min-width: 80 * $size;
+    margin-right: 10 * $size;
+    line-height: 38 * $size;
+    text-align: right;
+  }
+
+  .input {
+    width: 0;
+    flex: 1;
+  }
+
+  .icon {
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+.form-btn {
+  text-align: center;
+
+  .btn {
+    display: block;
+  }
+}

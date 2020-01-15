@@ -1,0 +1,115 @@
+// styles/variables.scss
+
+$font-family: "Microsoft YaHei",
+Helvetica,
+Arial,
+sans-serif,
+"PingFang SC";
+$size: 1px;
+$min-width: 1366px;
+
+// 主色调
+$base-color: #2d8cf0;
+$base-active-color: #036fdc;
+$base-hover-color: #20a1ff;
+
+$black-color: #000;
+$white-color: #fff;
+// 背景色
+$bg-color: #f8f8f9;
+
+$success-color: #19be6a;
+$warning-color: #f90;
+$danger-color: #ed3f14;
+$info-color: #878d99;
+
+$error-color: #ed3f14;
+
+// 边框色
+$border-color: #dfdfdf;
+// 字体色
+$font-color: #333;
+
+$red-color: #f60;
+$dark-color: #666;
+$gray-color: #999;
+$disable-color: #f5f7fa;
+$placeholder-color: #aaa;
+
+// 解决浮动问题
+@mixin clearfix {
+
+  &:after,
+  &:before {
+    content: '';
+    display: table;
+    width: 0;
+    height: 0;
+    font-size: 0;
+  }
+
+  &:after {
+    visibility: hidden;
+    clear: both;
+  }
+}
+
+// 显示省略符号来代表被修剪的文本
+@mixin ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+// 定义media-queries的最小最大宽度
+@mixin screen($min, $max) {
+  @if $min=='' {
+    @media screen and (max-width: $max) {
+      @content;
+    }
+  }
+
+  @else if $max=='' {
+    @media screen and (min-width: $min) {
+      @content;
+    }
+  }
+
+  @else {
+    @media screen and (min-width: $min) and (max-width:$max) {
+      @content;
+    }
+  }
+}
+
+// 三角形
+@mixin triangle($direction, $size, $border-color) {
+  display: block;
+  content: '';
+  height: 0;
+  width: 0;
+
+  @if $direction==top {
+    border-bottom: $size solid $border-color;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+  }
+
+  @else if $direction==right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $border-color;
+  }
+
+  @else if $direction==bottom {
+    border-top: $size solid $border-color;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+  }
+
+  @else if $direction==left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $border-color;
+  }
+}

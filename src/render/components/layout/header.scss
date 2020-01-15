@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  height: $size * 48;
+  background-color: $white-color;
+  border-bottom: $size * 1 solid $border-color;
+  align-items: center;
+  // -webkit-app-region: drag;
+
+  .title {
+    width: 0;
+    padding: 0 15 * $size;
+    font-weight: 700;
+    font-size: 16 * $size;
+    flex: 1;
+  }
+
+  .icon {
+    margin: 0 15 * $size;
+    color: $black-color;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+
+    &:hover {
+      color: $base-color;
+    }
+  }
+
+  .i-minimize {
+    font-size: 15 * $size;
+  }
+
+  .i-close {
+    font-size: 18 * $size;
+  }
+}

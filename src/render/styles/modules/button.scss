@@ -1,0 +1,24 @@
+// styles/modules/button.scss
+
+.btn {
+  display: inline-block;
+  min-width: 128 * $size;
+  padding: 10 * $size 20 * $size;
+  line-height: 20 * $size;
+  font-size: 16 * $size;
+  color: $white-color;
+  text-align: center;
+  outline: 0;
+  background-color: $base-color;
+  transition: background-color 150ms ease-in box-shadow 250ms ease;
+
+  &:hover {
+    opacity: 0.88;
+    box-shadow: 0 0 10 * $size 2 * $size rgba($base-color, .38);
+  }
+
+  &:active {
+    opacity: 1;
+    background-color: $base-active-color;
+  }
+}

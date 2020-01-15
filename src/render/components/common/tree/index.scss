@@ -1,0 +1,52 @@
+.tree {}
+
+.tree-node {}
+
+.tree-node_label {
+  display: flex;
+  line-height: 28 * $size;
+  cursor: pointer;
+  align-items: center;
+
+  &:hover {
+    background-color: $bg-color;
+  }
+
+  .icon {
+    padding: 6 * $size;
+    font-size: 12 * $size;
+    color: $gray-color;
+    transform: scale(0.8);
+  }
+
+  .checkbox {
+    margin-right: 0;
+
+    .mark {
+      width: 14 * $size;
+      height: 14 * $size;
+
+      &:after {
+        height: 9 * $size;
+      }
+    }
+  }
+
+  .tree-node_name {
+    width: 0;
+    @include ellipsis;
+    font-size: 14 * $size;
+    flex: 1;
+  }
+}
+
+.tree-node_child {
+  display: none;
+}
+
+.is-expanded {
+
+  >.tree-node_child {
+    display: block;
+  }
+}

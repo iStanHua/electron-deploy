@@ -1,0 +1,181 @@
+// styles/base.scss
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+a,
+b,
+body,
+button,
+dd,
+div,
+dl,
+dt,
+em,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+i,
+iframe,
+img,
+input,
+label,
+li,
+ol,
+p,
+select,
+span,
+strong,
+textarea,
+ul {
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  line-height: $size * 14;
+  font-family: $font-family;
+  font-size: $size * 14;
+  color: $font-color;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: $font-color;
+  cursor: pointer;
+  outline: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  outline: none;
+  border-radius: 0;
+  -webkit-app-region: no-drag;
+}
+
+button {
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+::-webkit-scrollbar {
+  width: $size * 6;
+  height: $size * 6;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba($black-color, 0);
+  border-radius: $size * 6;
+
+  &:hover {
+    background-color: rgba($black-color, .1);
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba($black-color, .2);
+  border-radius: $size * 6;
+
+  &:hover {
+    background-color: rgba($black-color, .3);
+  }
+
+  &:active {
+    background-color: rgba($black-color, .4);
+  }
+}
+
+@import 'modules/animation.scss';
+@import 'modules/iconfont.scss';
+@import 'modules/button.scss';
+@import 'modules/input.scss';
+@import 'modules/form.scss';
+@import 'modules/table.scss';
+
+.section {
+  margin-bottom: $size*20;
+  background-color: $white-color;
+  box-shadow: 0 $size $size*3 rgba(50, 50, 93, .15), 0 $size 0 rgba($black-color, .02);
+
+  .section-title {
+    padding: $size*20 $size*20 0;
+    line-height: $size*22;
+    font-size: $size*22;
+  }
+
+  .section-content {
+    padding: $size*20;
+
+    p {
+      padding-top: $size*10;
+    }
+  }
+}
+
+.sidebar-resize {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  width: 6 * $size;
+  cursor: col-resize;
+}

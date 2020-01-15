@@ -1,0 +1,33 @@
+// styles/modules/table.scss
+
+.grid-table {
+  border: 1 * $size solid $border-color;
+  border-bottom-width: 0;
+}
+
+.grid-header {
+  display: flex;
+  padding: 10 * $size;
+  line-height: 18 * $size;
+  font-weight: 700;
+  border-bottom: 1 * $size solid $border-color;
+}
+
+.grid-tr {
+  display: flex;
+  border-bottom: 1 * $size solid $border-color;
+  align-items: center;
+
+  .grid-item {
+    padding: 10 * $size;
+    line-height: 18 * $size;
+    word-break: break-all;
+    border-left: 1 * $size solid $border-color;
+    flex: 1;
+
+    &:first-child {
+      border-left-width: 0;
+      flex: 0 0 18%;
+    }
+  }
+}

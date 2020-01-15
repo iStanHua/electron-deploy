@@ -1,0 +1,84 @@
+.layer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  background-color: rgba($black-color, 0.68);
+  outline: 0;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.layer-box {
+  position: relative;
+  display: flex;
+  width: 680 * $size;
+  max-height: 68%;
+  background-color: $white-color;
+  animation-delay: 3000ms;
+  flex-direction: column;
+
+  .i-close {
+    line-height: $size*22;
+    font-size: $size*22;
+    cursor: pointer;
+
+    &:hover {
+      color: $red-color;
+    }
+  }
+
+  .layer-header {
+    display: flex;
+    padding: 10 * $size;
+    line-height: 22 * $size;
+    font-size: 18 * $size;
+    border-bottom: 1 * $size solid $border-color;
+
+    .layer-title {
+      width: 0;
+      text-align: center;
+      flex: 1;
+    }
+  }
+
+  .layer-close {
+    position: absolute;
+    top: -15 * $size;
+    right: -15 * $size;
+    z-index: 1;
+    padding: 5 * $size;
+    color: $white-color;
+    background-color: rgba($black-color, 0.8);
+    border-radius: 100%;
+
+    &:hover {
+      color: $white-color;
+      background-color: $red-color;
+    }
+  }
+
+  .layer-content {
+    height: 0;
+    min-height: 100 * $size;
+    padding: 15 * $size;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+  }
+
+  .layer-footer {
+    padding: 10 * $size;
+    text-align: right;
+    border-top: 1 * $size solid $border-color;
+
+    .btn {
+      margin-left: 20 * $size;
+    }
+  }
+}
