@@ -9,11 +9,11 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   strict: process.env.NODE_ENV !== 'production',
   state: {
-    host: ''
+    hostList: []
   },
   mutations: {
     SET_HOST(state, payload) {
-      state.host = payload
+      state.hostList.push(payload)
     }
   },
   actions: {
@@ -22,7 +22,6 @@ export default new Vuex.Store({
     },
     logout({ commit }) {
       ipcRenderer.send('ipc-login', 'logout')
-      commit('SET_HOST', '')
       router.replace('/')
     }
   }

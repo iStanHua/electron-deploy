@@ -1,41 +1,24 @@
 <template>
   <div class="content home-page">
-    <loading :show="loading" class="main"></loading>
-    <template v-if="!loading">
-      <div class="main">
-        <div class="database-columm" v-resize>
-          <div class="column-title">
-            <i class="icon i-host"></i>
-            <span>{{ host }}</span>
-          </div>
-          <div class="columm-view">
-            <div class="column-item" :class="{'column-active':item.name===currentDatabase}"
-              v-for="(item, index) in databaseList" :key="index" @click="onSelectDatabase(item.name)">
-              <i class="icon i-data"></i>
-              <span>{{ item.name }}</span>
-            </div>
-          </div>
-          <div class="footer">
-            <a @click="onLogout">退出</a>
-          </div>
-        </div>
-        <div class="tree-columm">
-          <loading :show="treeLoading" class="columm-view"></loading>
-          <div v-show="!treeLoading&&treeList.length" class="columm-view">
-            <tree ref="treeRef" :data="treeList" checkbox>
-              <template slot-scope="node">
-                <i v-if="node.level===1" class="icon i-table"></i>
-                <span>{{ node.name }}</span>
-                <em v-if="node.remark">({{ node.remark }})</em>
-              </template>
-            </tree>
-          </div>
-          <div v-if="currentDatabase" class="footer">
-            <a class="btn" @click="onCreate">创建项目</a>
-          </div>
+    <div v-if="hostList.length" class="nav-column">
+      <div class="nav-list">
+        <div class="nav-item" v-for="(item, i) in hostList" :key="i" :class="{'nav-active':currentIndex===i}">
+          <i class="icon i-host"></i>
+          <span>{{ item }}</span>
         </div>
       </div>
-    </template>
+      <a class="nav-item" @click="onCreate">新建会话</a>
+    </div>
+    <div class="main">
+      <div v-if="hostList.length===0" class="empty-item">
+        <a @click="onCreate">新建会话</a>
+      </div>
+      <div class="shell-panel">
+        <div class="path">$</div>
+        <div class="input"></div>
+        <div class="cursor"></div>
+      </div>
+    </div>
   </div>
 </template>
 <style lang="scss" src="./index.scss"></style>

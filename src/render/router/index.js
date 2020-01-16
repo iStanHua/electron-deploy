@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Layout from '@/components/layout/index.vue'
-
 import homePage from '@/views/index.vue'
 
 Vue.use(Router)
@@ -17,18 +16,18 @@ const router = new Router({
         {
           path: '',
           meta: {
-            title: '登录MySQL',
+            title: 'SSH',
+            max: false
+          },
+          component: homePage
+        },
+        {
+          path: 'login',
+          meta: {
+            title: '登录服务器',
             max: false
           },
           component: () => import('@/views/login.vue')
-        },
-        {
-          path: 'index',
-          meta: {
-            title: 'MySQL',
-            max: true
-          },
-          component: homePage
         },
         {
           path: '*',

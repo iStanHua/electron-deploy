@@ -1,24 +1,42 @@
 // styles/modules/button.scss
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
   min-width: 128 * $size;
   padding: 10 * $size 20 * $size;
   line-height: 20 * $size;
   font-size: 16 * $size;
   color: $white-color;
-  text-align: center;
   outline: 0;
   background-color: $base-color;
   transition: background-color 150ms ease-in box-shadow 250ms ease;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     opacity: 0.88;
-    box-shadow: 0 0 10 * $size 2 * $size rgba($base-color, .38);
+    box-shadow: 0 0 10 * $size 2 * $size rgba($base-color, 0.38);
   }
 
   &:active {
     opacity: 1;
     background-color: $base-active-color;
+  }
+}
+
+.loading-btn {
+  opacity: 0.68;
+  cursor: not-allowed;
+
+  &:before {
+    content: "";
+    width: 16 * $size;
+    height: 16 * $size;
+    margin: 0 8 * $size 0 0;
+    border-width: 2 * $size;
+    border-style: solid;
+    border-color: transparent rgba($white-color, 1) rgba($white-color, 1) transparent;
+    border-radius: 50%;
+    animation: rotating 0.7s linear infinite;
   }
 }

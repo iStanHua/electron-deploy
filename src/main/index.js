@@ -27,8 +27,8 @@ protocol.registerSchemesAsPrivileged([{
 // Create the browser window.
 function createMainWindow() {
   mainWindow = new BrowserWindow({
-    width: 380,
-    height: 360,
+    width: 1000,
+    height: 680,
     autoHideMenuBar: true,
     center: true,
     frame: false,
@@ -192,17 +192,6 @@ ipcMain.on('online-status-changed', (e, status) => {
 
 // 登录或退出成功
 ipcMain.on('ipc-login', (e, arg) => {
-  if (arg === 'login') {
-    mainWindow.setSize(888, 680)
-    mainWindow.setMinimumSize(888, 680)
-    mainWindow.setResizable(true)
-  }
-  else if (arg === 'logout') {
-    mainWindow.setSize(380, 360)
-    mainWindow.setResizable(false)
-  }
-
-  mainWindow.moveTop()
   mainWindow.center()
 })
 

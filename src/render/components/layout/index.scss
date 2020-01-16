@@ -2,7 +2,6 @@
   display: flex;
   height: 100%;
   overflow: hidden;
-  background-color: $bg-color;
   flex-direction: column;
 }
 
@@ -12,6 +11,5 @@
   margin: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: $white-color;
   flex: 1;
 }

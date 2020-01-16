@@ -1,76 +1,53 @@
 .home-page {
-  display: flex;
   padding: 0;
   overflow: hidden;
-  flex-direction: column;
+
+  .nav-column {
+    display: flex;
+    width: 160 * $size;
+    overflow: hidden;
+    background-color: $base-color;
+    flex-direction: column;
+  }
+  .nav-item {
+    color: $white-color;
+    padding: 12 * $size 10 * $size;
+  }
+  .nav-active {
+    color: $base-color;
+    background-color: $bg-color;
+  }
+  .nav-list {
+    height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 1;
+
+    .nav-item {
+      cursor: pointer;
+      &:hover {
+        color: $base-color;
+        background-color: $bg-color;
+      }
+    }
+  }
+  .logout {
+    text-align: center;
+  }
 
   .main {
     display: flex;
-    height: 0;
-    flex: 1;
     overflow: hidden;
+    flex: 1;
   }
-
-  .database-columm {
+  .empty-item {
     display: flex;
-    width: 180 * $size;
-    background-color: $white-color;
-    border-right: 1 * $size solid $border-color;
-    flex-direction: column;
-
-    i {
-      margin-right: 8 * $size;
-    }
-
-    .column-title {
-      padding: 15 * $size 20 * $size;
-      font-weight: 700;
-      font-size: 16 * $size;
-      border-bottom: 1 * $size solid $border-color;
-    }
-
-    .column-item {
-      padding: 15 * $size 20 * $size;
-      font-size: 15 * $size;
-      cursor: pointer;
-
-      &:hover,
-      &.column-active {
-        color: $white-color;
-        background-color: $base-color;
-      }
-    }
-
-    .footer {
-      border-top: 1 * $size solid $border-color;
-    }
-
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
     a {
       color: $base-color;
     }
   }
-
-  .columm-view {
-    overflow-x: hidden;
-    overflow-y: auto;
-    flex: 1;
-  }
-
-  .footer {
-    display: flex;
-    padding: 10 * $size;
-    justify-content: center;
-
-    .btn {
-      margin: 0 20 * $size;
-    }
-  }
-
-  .tree-columm {
-    display: flex;
-    width: 0;
-    flex: 1;
-    flex-direction: column;
-  }
-
 }

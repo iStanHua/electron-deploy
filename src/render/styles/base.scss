@@ -70,11 +70,11 @@ html {
 }
 
 body {
-  line-height: $size * 14;
+  line-height: 14 * $size;
   font-family: $font-family;
-  font-size: $size * 14;
+  font-size: 14 * $size;
   color: $font-color;
-  background-color: transparent;
+  background-color: $bg-color;
 }
 
 a {
@@ -117,55 +117,55 @@ iframe {
 }
 
 ::-webkit-scrollbar {
-  width: $size * 6;
-  height: $size * 6;
+  width: 6 * $size;
+  height: 6 * $size;
 }
 
 ::-webkit-scrollbar-track {
   background-color: rgba($black-color, 0);
-  border-radius: $size * 6;
+  border-radius: 6 * $size;
 
   &:hover {
-    background-color: rgba($black-color, .1);
+    background-color: rgba($black-color, 0.1);
   }
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba($black-color, .2);
-  border-radius: $size * 6;
+  background-color: rgba($black-color, 0.2);
+  border-radius: 6 * $size;
 
   &:hover {
-    background-color: rgba($black-color, .3);
+    background-color: rgba($black-color, 0.3);
   }
 
   &:active {
-    background-color: rgba($black-color, .4);
+    background-color: rgba($black-color, 0.4);
   }
 }
 
-@import 'modules/animation.scss';
-@import 'modules/iconfont.scss';
-@import 'modules/button.scss';
-@import 'modules/input.scss';
-@import 'modules/form.scss';
-@import 'modules/table.scss';
+@import "modules/animation.scss";
+@import "modules/iconfont.scss";
+@import "modules/button.scss";
+@import "modules/input.scss";
+@import "modules/form.scss";
+@import "modules/table.scss";
 
 .section {
-  margin-bottom: $size*20;
+  margin-bottom: 20 * $size;
   background-color: $white-color;
-  box-shadow: 0 $size $size*3 rgba(50, 50, 93, .15), 0 $size 0 rgba($black-color, .02);
+  box-shadow: 0 $size $size * 3 rgba(50, 50, 93, 0.15), 0 $size 0 rgba($black-color, 0.02);
 
   .section-title {
-    padding: $size*20 $size*20 0;
-    line-height: $size*22;
-    font-size: $size*22;
+    padding: 20 * $size 20 * $size 0;
+    line-height: $size * 22;
+    font-size: $size * 22;
   }
 
   .section-content {
-    padding: $size*20;
+    padding: 20 * $size;
 
     p {
-      padding-top: $size*10;
+      padding-top: 10 * $size;
     }
   }
 }

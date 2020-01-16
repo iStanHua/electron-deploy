@@ -3,19 +3,23 @@
   padding: 0;
   overflow: hidden;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  .header {
-    color: $white-color;
-    background-color: $base-color;
+  // .header {
+  //   color: $white-color;
+  //   background-color: $base-color;
 
-    .icon {
-      color: $white-color;
-    }
-  }
+  //   .icon {
+  //     color: $white-color;
+  //   }
+  // }
 
   .form-box {
+    width: 320 * $size;
     padding: 20 * $size;
-
+    background-color: $white-color;
+    box-shadow: 0 0 10 * $size rgba($black-color, 0.18);
   }
 
   .form-item {

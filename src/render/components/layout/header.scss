@@ -1,27 +1,27 @@
 .header {
   display: flex;
   height: $size * 48;
-  background-color: $white-color;
-  border-bottom: $size * 1 solid $border-color;
+  color: $white-color;
+  background-color: $base-color;
+  // border-bottom: $size * 1 solid $border-color;
   align-items: center;
   // -webkit-app-region: drag;
 
   .title {
     width: 0;
     padding: 0 15 * $size;
-    font-weight: 700;
+    // font-weight: 700;
     font-size: 16 * $size;
     flex: 1;
   }
 
   .icon {
     margin: 0 15 * $size;
-    color: $black-color;
     cursor: pointer;
     -webkit-app-region: no-drag;
 
     &:hover {
-      color: $base-color;
+      color: $red-color;
     }
   }
 

@@ -18,7 +18,7 @@
         <input type="password" class="input" v-model="formData.password" placeholder="密码" />
       </div>
       <div class="form-btn">
-        <a class="btn" @click="onLogin">登录</a>
+        <a class="btn" @click="onLogin" :class="{'loading-btn':loading}">登录</a>
       </div>
     </div>
   </div>
