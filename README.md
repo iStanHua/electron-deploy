@@ -1,4 +1,4 @@
-# electron-deploy
+# electron-ssh
 
 ## Project setup
 ```
