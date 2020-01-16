@@ -1,7 +1,7 @@
 # electron-ssh
 
 ## Project setup
-```node
+```
 npm install
 ```
 
